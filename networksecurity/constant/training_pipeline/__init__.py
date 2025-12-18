@@ -7,6 +7,7 @@ TARGET_COLUMN = 'Result'
 PIPELINE_NAME : str = 'NetworkSecurity'
 ARTIFACTS_DIR : str = 'Artifacts'
 FILE_NAME : str = 'phisingData.csv'
+MODEL_FILE_NAME :str = "model.pkl"
 
 TRAIN_DATA_NAME : str = 'train.csv'
 TEST_DATA_NAME : str = 'test.csv'
@@ -41,6 +42,25 @@ DATA_TRANSFORMATION_IMPUTER_PARAMS: dict = {
     "n_neighbors" : 3,
     "weights" : "uniform",
 }
+
+DATA_TRANSFORMATION_TRAIN_FILE_PATH: str = "train.npy"
+
+DATA_TRANSFORMATION_TEST_FILE_PATH: str = "test.npy"
+
+## Model Trainer
+
+MODEL_TRAINER_DIR_NAME: str = "model_trainer"
+MODEL_TRAINER_TRAINED_MODEL_DIR :str = "trained_model"
+MODEL_TRAINER_TRAINED_MODEL_NAME :str = "model.pkl"
+MODEL_TRAINER_EXPECTED_SCORE :float = 0.6
+MODEL_TRAINER_OVER_FITTING_UNDER_FITTING_THRESHOLD :float = 0.05
+
+TRAINING_BUCKET_NAME = "networksecurity"
+
+
+
+
+
 
 
 
