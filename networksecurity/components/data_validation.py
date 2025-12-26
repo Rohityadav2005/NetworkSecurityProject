@@ -57,8 +57,8 @@ class DataValidation:
             report ={}
 
             for column in base_df.columns:
-                d1 = base_df
-                d2 = current_df
+                d1 = base_df[column]
+                d2 = current_df[column]
                 is_same_distribution = ks_2samp(d1,d2)
 
                 if threshold <= is_same_distribution.pvalue:
@@ -69,7 +69,7 @@ class DataValidation:
             report.update({column:{
                         "p_value":float(is_same_distribution.pvalue),
                         "drift_status":is_found
-            }})
+            }})       
                     
 
         except Exception as e:
@@ -114,11 +114,11 @@ class DataValidation:
 
             data_validation_artifact = DataValidationArtifact(
                 validation_status= status,
-                valid_train_file_path= data_ingestion_artifact.trained_file_path,
-                valid_test_file_path= data_ingestion_artifact.test_file_path,
+                valid_train_file_path= self.data_ingestion_artifact.trained_file_path,
+                valid_test_file_path= self.data_ingestion_artifact.test_file_path,
                 invalid_train_file_path=None,
                 invalid_test_file_path=None,
-                drift_report_file_path=data_validation_config.drift_report_file_path,
+                drift_report_file_path=self.data_validation_config.drift_report_file_path,
             )
             return data_validation_artifact
 

@@ -1,0 +1,3 @@
+[ 2025-12-25 11:02:32,683 ] 16 root - INFO - Initiate the data ingestion
+[ 2025-12-25 11:02:32,724 ] 18 root - INFO - data ingestion completed
+[ 2025-12-25 11:02:32,740 ] 22 root - INFO - Initiate the data validation

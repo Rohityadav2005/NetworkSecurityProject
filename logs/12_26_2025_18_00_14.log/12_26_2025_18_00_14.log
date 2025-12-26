@@ -1,0 +1,44 @@
+[ 2025-12-26 18:00:16,499 ] 164 numexpr.utils - INFO - NumExpr defaulting to 16 threads.
+[ 2025-12-26 18:00:20,708 ] 17 root - INFO - Initiate the data ingestion
+[ 2025-12-26 18:00:41,660 ] 61 root - INFO - performed train test split
+[ 2025-12-26 18:00:41,660 ] 62 root - INFO - Exited split_data_as_train_test method in the DataIngestion class
+[ 2025-12-26 18:00:41,662 ] 66 root - INFO - exporting train and test file path
+[ 2025-12-26 18:00:42,030 ] 69 root - INFO - exporting train and test file path
+[ 2025-12-26 18:00:42,032 ] 19 root - INFO - data ingestion completed
+[ 2025-12-26 18:00:42,032 ] 23 root - INFO - Initiate the data validation
+[ 2025-12-26 18:00:42,221 ] 33 root - INFO - Required number of columns :23
+[ 2025-12-26 18:00:42,221 ] 34 root - INFO - Number of Columns Dataframe have :Index(['having_IP_Address', 'URL_Length', 'Shortining_Service',
+       'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix',
+       'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length',
+       'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor',
+       'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL',
+       'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe',
+       'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank',
+       'Google_Index', 'Links_pointing_to_page', 'Statistical_report',
+       'Result'],
+      dtype='object')
+[ 2025-12-26 18:00:42,221 ] 33 root - INFO - Required number of columns :23
+[ 2025-12-26 18:00:42,221 ] 34 root - INFO - Number of Columns Dataframe have :Index(['having_IP_Address', 'URL_Length', 'Shortining_Service',
+       'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix',
+       'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length',
+       'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor',
+       'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL',
+       'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe',
+       'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank',
+       'Google_Index', 'Links_pointing_to_page', 'Statistical_report',
+       'Result'],
+      dtype='object')
+[ 2025-12-26 18:00:42,977 ] 25 root - INFO - Data validation completed
+[ 2025-12-26 18:00:42,977 ] 28 root - INFO - entering data transformation
+[ 2025-12-26 18:00:42,977 ] 53 root - INFO - Entering the initiate_data_transformation method in DataTransformation class
+[ 2025-12-26 18:00:42,978 ] 55 root - INFO - starting data transformation
+[ 2025-12-26 18:00:43,108 ] 42 root - INFO - entered the get_data_transformation_object in the DataTransformation class
+[ 2025-12-26 18:00:43,109 ] 45 root - INFO - Initialize KNNimputer with {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
+[ 2025-12-26 18:00:43,151 ] 42 root - INFO - We have entered the save object method of the MainUtil class
+[ 2025-12-26 18:00:43,163 ] 46 root - INFO - We have succesfully saved the object
+[ 2025-12-26 18:00:43,167 ] 32 root - INFO - Data Transformation is completed
+[ 2025-12-26 18:00:43,167 ] 34 root - INFO - Model Training started
+[ 2025-12-26 18:01:45,782 ] 42 root - INFO - We have entered the save object method of the MainUtil class
+[ 2025-12-26 18:01:45,804 ] 46 root - INFO - We have succesfully saved the object
+[ 2025-12-26 18:01:45,804 ] 117 root - INFO - Model Trainer artifact:ModelTrainerArtifact(trained_model_file_path='Artifacts\\12_26_2025_18_00_17\\model_trainer\\trained_model\\model.pkl', train_model_artifact=ClassificationMetricArtifact(f1_score=0.9910052986442979, precision_score=0.9875122288081948, recall_score=0.9945231678692515), test_model_artifact=ClassificationMetricArtifact(f1_score=0.9894492753623189, precision_score=0.9854503464203234, recall_score=0.9934807916181606))
+[ 2025-12-26 18:01:45,807 ] 39 root - INFO - Model Training is artifact created

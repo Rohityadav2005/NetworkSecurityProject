@@ -12,10 +12,14 @@ MODEL_FILE_NAME :str = "model.pkl"
 TRAIN_DATA_NAME : str = 'train.csv'
 TEST_DATA_NAME : str = 'test.csv'
 
-SCHEMA_FILE_PATH: os.path.join("data_schema","schema.yaml")
+SCHEMA_FILE_PATH = os.path.join("data_schema","schema.yaml") # type: ignore
+
+SAVED_MODEL_DIR = os.path.join("saved_models")
+MODEL_FILE_NAME = "model.pkl"
+
  ## data ingestion variables
 DATA_INGESTION_COLLECTION_NAME : str = 'NetworkData'
-DATA_INGESTION_DATABASE_NAME : str = 'DS_Rohit'
+DATA_INGESTION_DATABASE_NAME : str = 'ROHITAIML'
 DATA_INGESTION_DIR_NAME : str = 'data_ingestion'
 DATA_INGESTION_FEATURE_STORE_DIR : str = 'feature_store'
 DATA_INGESTION_INGESTED_DIR : str = 'Ingested'
@@ -56,11 +60,3 @@ MODEL_TRAINER_EXPECTED_SCORE :float = 0.6
 MODEL_TRAINER_OVER_FITTING_UNDER_FITTING_THRESHOLD :float = 0.05
 
 TRAINING_BUCKET_NAME = "networksecurity"
-
-
-
-
-
-
-
-

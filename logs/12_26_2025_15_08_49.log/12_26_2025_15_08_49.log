@@ -1,0 +1,33 @@
+[ 2025-12-26 15:08:52,889 ] 16 root - INFO - Initiate the data ingestion
+[ 2025-12-26 15:09:25,418 ] 61 root - INFO - performed train test split
+[ 2025-12-26 15:09:25,418 ] 62 root - INFO - Exited split_data_as_train_test method in the DataIngestion class
+[ 2025-12-26 15:09:25,437 ] 66 root - INFO - exporting train and test file path
+[ 2025-12-26 15:09:26,068 ] 69 root - INFO - exporting train and test file path
+[ 2025-12-26 15:09:26,072 ] 18 root - INFO - data ingestion completed
+[ 2025-12-26 15:09:26,074 ] 22 root - INFO - Initiate the data validation
+[ 2025-12-26 15:09:26,341 ] 33 root - INFO - Required number of columns :23
+[ 2025-12-26 15:09:26,349 ] 34 root - INFO - Number of Columns Dataframe have :Index(['having_IP_Address', 'URL_Length', 'Shortining_Service',
+       'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix',
+       'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length',
+       'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor',
+       'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL',
+       'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe',
+       'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank',
+       'Google_Index', 'Links_pointing_to_page', 'Statistical_report',
+       'Result'],
+      dtype='object')
+[ 2025-12-26 15:09:26,349 ] 33 root - INFO - Required number of columns :23
+[ 2025-12-26 15:09:26,349 ] 34 root - INFO - Number of Columns Dataframe have :Index(['having_IP_Address', 'URL_Length', 'Shortining_Service',
+       'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix',
+       'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length',
+       'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor',
+       'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL',
+       'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe',
+       'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank',
+       'Google_Index', 'Links_pointing_to_page', 'Statistical_report',
+       'Result'],
+      dtype='object')
+[ 2025-12-26 15:09:27,355 ] 24 root - INFO - Data validation completed
+[ 2025-12-26 15:09:27,356 ] 27 root - INFO - entering data transformation
+[ 2025-12-26 15:09:27,356 ] 53 root - INFO - Entering the initiate_data_transformation method in DataTransformation class
+[ 2025-12-26 15:09:27,356 ] 55 root - INFO - starting data transformation
