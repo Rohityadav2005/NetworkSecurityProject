@@ -1,0 +1,53 @@
+[ 2025-12-27 01:42:42,887 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-12-27 01:42:42,897 ] 107 dagshub - INFO - Accessing as rohit2205x
+[ 2025-12-27 01:42:43,809 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/rohit2205x/NetworkSecurityProject "HTTP/1.1 200 OK"
+[ 2025-12-27 01:42:44,627 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-12-27 01:42:44,634 ] 107 dagshub - INFO - Initialized MLflow to track repo "rohit2205x/NetworkSecurityProject"
+[ 2025-12-27 01:42:44,636 ] 107 dagshub - INFO - Repository rohit2205x/NetworkSecurityProject initialized!
+[ 2025-12-27 01:42:44,637 ] 17 root - INFO - Initiate the data ingestion
+[ 2025-12-27 01:43:01,604 ] 61 root - INFO - performed train test split
+[ 2025-12-27 01:43:01,604 ] 62 root - INFO - Exited split_data_as_train_test method in the DataIngestion class
+[ 2025-12-27 01:43:01,606 ] 66 root - INFO - exporting train and test file path
+[ 2025-12-27 01:43:02,202 ] 69 root - INFO - exporting train and test file path
+[ 2025-12-27 01:43:02,205 ] 19 root - INFO - data ingestion completed
+[ 2025-12-27 01:43:02,206 ] 23 root - INFO - Initiate the data validation
+[ 2025-12-27 01:43:02,472 ] 33 root - INFO - Required number of columns :23
+[ 2025-12-27 01:43:02,472 ] 34 root - INFO - Number of Columns Dataframe have :Index(['having_IP_Address', 'URL_Length', 'Shortining_Service',
+       'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix',
+       'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length',
+       'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor',
+       'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL',
+       'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe',
+       'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank',
+       'Google_Index', 'Links_pointing_to_page', 'Statistical_report',
+       'Result'],
+      dtype='object')
+[ 2025-12-27 01:43:02,472 ] 33 root - INFO - Required number of columns :23
+[ 2025-12-27 01:43:02,473 ] 34 root - INFO - Number of Columns Dataframe have :Index(['having_IP_Address', 'URL_Length', 'Shortining_Service',
+       'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix',
+       'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length',
+       'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor',
+       'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL',
+       'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe',
+       'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank',
+       'Google_Index', 'Links_pointing_to_page', 'Statistical_report',
+       'Result'],
+      dtype='object')
+[ 2025-12-27 01:43:03,690 ] 25 root - INFO - Data validation completed
+[ 2025-12-27 01:43:03,690 ] 28 root - INFO - entering data transformation
+[ 2025-12-27 01:43:03,690 ] 53 root - INFO - Entering the initiate_data_transformation method in DataTransformation class
+[ 2025-12-27 01:43:03,691 ] 55 root - INFO - starting data transformation
+[ 2025-12-27 01:43:03,946 ] 42 root - INFO - entered the get_data_transformation_object in the DataTransformation class
+[ 2025-12-27 01:43:03,946 ] 45 root - INFO - Initialize KNNimputer with {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
+[ 2025-12-27 01:43:04,017 ] 42 root - INFO - We have entered the save object method of the MainUtil class
+[ 2025-12-27 01:43:04,038 ] 46 root - INFO - We have succesfully saved the object
+[ 2025-12-27 01:43:04,039 ] 42 root - INFO - We have entered the save object method of the MainUtil class
+[ 2025-12-27 01:43:04,059 ] 46 root - INFO - We have succesfully saved the object
+[ 2025-12-27 01:43:04,071 ] 32 root - INFO - Data Transformation is completed
+[ 2025-12-27 01:43:04,071 ] 34 root - INFO - Model Training started
+[ 2025-12-27 01:45:01,847 ] 42 root - INFO - We have entered the save object method of the MainUtil class
+[ 2025-12-27 01:45:01,857 ] 46 root - INFO - We have succesfully saved the object
+[ 2025-12-27 01:45:01,859 ] 119 root - INFO - Model Trainer artifact:ModelTrainerArtifact(trained_model_file_path='Artifacts\\12_27_2025_01_42_39\\model_trainer\\trained_model\\model.pkl', train_model_artifact=ClassificationMetricArtifact(f1_score=0.9907996759634301, precision_score=0.9883975987069961, recall_score=0.9932134570765662), test_model_artifact=ClassificationMetricArtifact(f1_score=0.9906325893373424, precision_score=0.9874351585014409, recall_score=0.9938507947557721))
+[ 2025-12-27 01:45:01,859 ] 42 root - INFO - We have entered the save object method of the MainUtil class
+[ 2025-12-27 01:45:01,870 ] 46 root - INFO - We have succesfully saved the object
+[ 2025-12-27 01:45:01,876 ] 39 root - INFO - Model Training is artifact created

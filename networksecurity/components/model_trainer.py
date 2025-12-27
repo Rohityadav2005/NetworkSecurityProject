@@ -23,6 +23,8 @@ from sklearn.ensemble import (
     RandomForestClassifier
 )
 import mlflow
+import dagshub
+dagshub.init(repo_owner='rohit2205x', repo_name='NetworkSecurityProject', mlflow=True)
 
 class ModelTrainer:
     def __init__(self,model_trainer_config:ModelTrainerConfig,data_transformation_artifact:DataTransformationArtifact):
@@ -65,7 +67,7 @@ class ModelTrainer:
                 # 'criterion':['gini', 'entropy', 'log_loss'],
                 
                 # 'max_features':['sqrt','log2',None],
-                'n_estimators': [8,16,32,128,256]
+                'n_estimators': [8,16,32,256]
             },
             "Gradient Boosting":{
                 # 'loss':['log_loss', 'exponential'],
@@ -114,7 +116,9 @@ class ModelTrainer:
             trained_model_file_path=self.model_trainer_config.trained_model_file_path,
             train_model_artifact = classification_train_metric,
             test_model_artifact = classification_test_metric)
-        logging.info(f"Model Trainer artifact:{model_trainer_artifact}")  
+        logging.info(f"Model Trainer artifact:{model_trainer_artifact}") 
+
+        save_object("final_models/model.pkl",best_model) 
         return model_trainer_artifact   
         
     def initiate_model_trainer(self):

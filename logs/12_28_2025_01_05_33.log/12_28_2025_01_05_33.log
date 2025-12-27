@@ -1,0 +1,6 @@
+[ 2025-12-28 01:05:36,107 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-12-28 01:05:36,113 ] 107 dagshub - INFO - Accessing as rohit2205x
+[ 2025-12-28 01:05:37,009 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/rohit2205x/NetworkSecurityProject "HTTP/1.1 200 OK"
+[ 2025-12-28 01:05:37,901 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-12-28 01:05:37,902 ] 107 dagshub - INFO - Initialized MLflow to track repo "rohit2205x/NetworkSecurityProject"
+[ 2025-12-28 01:05:37,903 ] 107 dagshub - INFO - Repository rohit2205x/NetworkSecurityProject initialized!

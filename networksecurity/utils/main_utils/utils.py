@@ -51,8 +51,9 @@ def load_object(file_path: str) ->object:
     try:
         if not os.path.exists(file_path):
             raise Exception(f"The file {file_path} does not exist")
-        with open(file_path) as file_obj:
+        with open(file_path,"rb") as file_obj:
             print(file_obj)
+            return pickle.load(file_obj)
 
     except Exception as e:
         raise NetworkSecurityException(e,sys)

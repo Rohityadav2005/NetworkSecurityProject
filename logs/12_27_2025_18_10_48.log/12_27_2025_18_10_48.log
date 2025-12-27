@@ -1,0 +1,53 @@
+[ 2025-12-27 18:10:52,683 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-12-27 18:10:52,697 ] 107 dagshub - INFO - Accessing as rohit2205x
+[ 2025-12-27 18:10:53,696 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/rohit2205x/NetworkSecurityProject "HTTP/1.1 200 OK"
+[ 2025-12-27 18:10:54,394 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-12-27 18:10:54,397 ] 107 dagshub - INFO - Initialized MLflow to track repo "rohit2205x/NetworkSecurityProject"
+[ 2025-12-27 18:10:54,397 ] 107 dagshub - INFO - Repository rohit2205x/NetworkSecurityProject initialized!
+[ 2025-12-27 18:11:31,898 ] 37 root - INFO - starting Data Ingestion
+[ 2025-12-27 18:11:53,553 ] 61 root - INFO - performed train test split
+[ 2025-12-27 18:11:53,554 ] 62 root - INFO - Exited split_data_as_train_test method in the DataIngestion class
+[ 2025-12-27 18:11:53,555 ] 66 root - INFO - exporting train and test file path
+[ 2025-12-27 18:11:54,879 ] 69 root - INFO - exporting train and test file path
+[ 2025-12-27 18:11:54,883 ] 40 root - INFO - Data ingestion completed and artifact:DataIngestionArtifact(trained_file_path='Artifacts\\12_27_2025_18_10_50\\data_ingestion\\Ingested\\train.csv', test_file_path='Artifacts\\12_27_2025_18_10_50\\data_ingestion\\Ingested\\test.csv')
+[ 2025-12-27 18:11:54,883 ] 48 root - INFO - starting Data Validation
+[ 2025-12-27 18:11:55,068 ] 33 root - INFO - Required number of columns :23
+[ 2025-12-27 18:11:55,069 ] 34 root - INFO - Number of Columns Dataframe have :Index(['having_IP_Address', 'URL_Length', 'Shortining_Service',
+       'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix',
+       'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length',
+       'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor',
+       'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL',
+       'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe',
+       'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank',
+       'Google_Index', 'Links_pointing_to_page', 'Statistical_report',
+       'Result'],
+      dtype='object')
+[ 2025-12-27 18:11:55,069 ] 33 root - INFO - Required number of columns :23
+[ 2025-12-27 18:11:55,069 ] 34 root - INFO - Number of Columns Dataframe have :Index(['having_IP_Address', 'URL_Length', 'Shortining_Service',
+       'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix',
+       'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length',
+       'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor',
+       'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL',
+       'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe',
+       'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank',
+       'Google_Index', 'Links_pointing_to_page', 'Statistical_report',
+       'Result'],
+      dtype='object')
+[ 2025-12-27 18:11:55,834 ] 51 root - INFO - Data validation has completed and artifact:DataValidationArtifact(validation_status=None, valid_train_file_path='Artifacts\\12_27_2025_18_10_50\\data_ingestion\\Ingested\\train.csv', valid_test_file_path='Artifacts\\12_27_2025_18_10_50\\data_ingestion\\Ingested\\test.csv', invalid_train_file_path=None, invalid_test_file_path=None, drift_report_file_path='Artifacts\\12_27_2025_18_10_50\\data_validation\\drift_report\\report.yaml')
+[ 2025-12-27 18:11:55,834 ] 60 root - INFO - Data transformation is started
+[ 2025-12-27 18:11:55,834 ] 53 root - INFO - Entering the initiate_data_transformation method in DataTransformation class
+[ 2025-12-27 18:11:55,835 ] 55 root - INFO - starting data transformation
+[ 2025-12-27 18:11:55,950 ] 42 root - INFO - entered the get_data_transformation_object in the DataTransformation class
+[ 2025-12-27 18:11:55,950 ] 45 root - INFO - Initialize KNNimputer with {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
+[ 2025-12-27 18:11:55,996 ] 42 root - INFO - We have entered the save object method of the MainUtil class
+[ 2025-12-27 18:11:56,008 ] 46 root - INFO - We have succesfully saved the object
+[ 2025-12-27 18:11:56,009 ] 42 root - INFO - We have entered the save object method of the MainUtil class
+[ 2025-12-27 18:11:56,020 ] 46 root - INFO - We have succesfully saved the object
+[ 2025-12-27 18:11:56,024 ] 63 root - INFO - Data Transformation has completed and artifact:DataTransformationArtifact(transformed_object_file_path='Artifacts\\12_27_2025_18_10_50\\data_transformation\\transformed_obj\\preprocessing.pkl', transformed_train_file_path='Artifacts\\12_27_2025_18_10_50\\data_transformation\\transformed\\train.npy', transformed_test_file_path='Artifacts\\12_27_2025_18_10_50\\data_transformation\\transformed\\test.npy')
+[ 2025-12-27 18:11:56,024 ] 72 root - INFO - starting Model Trainer
+[ 2025-12-27 18:14:12,579 ] 42 root - INFO - We have entered the save object method of the MainUtil class
+[ 2025-12-27 18:14:12,666 ] 46 root - INFO - We have succesfully saved the object
+[ 2025-12-27 18:14:12,667 ] 119 root - INFO - Model Trainer artifact:ModelTrainerArtifact(trained_model_file_path='Artifacts\\12_27_2025_18_10_50\\model_trainer\\trained_model\\model.pkl', train_model_artifact=ClassificationMetricArtifact(f1_score=0.9909288508911752, precision_score=0.9880082064322246, recall_score=0.9938668139406447), test_model_artifact=ClassificationMetricArtifact(f1_score=0.990137614678899, precision_score=0.987419945105215, recall_score=0.9928702851885924))
+[ 2025-12-27 18:14:12,668 ] 42 root - INFO - We have entered the save object method of the MainUtil class
+[ 2025-12-27 18:14:12,732 ] 46 root - INFO - We have succesfully saved the object
+[ 2025-12-27 18:14:12,744 ] 75 root - INFO - Model training is completed and artifact:ModelTrainerArtifact(trained_model_file_path='Artifacts\\12_27_2025_18_10_50\\model_trainer\\trained_model\\model.pkl', train_model_artifact=ClassificationMetricArtifact(f1_score=0.9909288508911752, precision_score=0.9880082064322246, recall_score=0.9938668139406447), test_model_artifact=ClassificationMetricArtifact(f1_score=0.990137614678899, precision_score=0.987419945105215, recall_score=0.9928702851885924))
